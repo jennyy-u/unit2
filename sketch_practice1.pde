@@ -12,6 +12,9 @@ void setup(){
 void draw(){
   background(255);
   strokeWeight(2);
-  ellipse(100, x, 100, 100);
+  ellipse(100, x, 80, 80);
   x = x + 1;
+  if (x > 250) {
+    x = -100;
+  }
 }
