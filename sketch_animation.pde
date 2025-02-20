@@ -10,6 +10,8 @@
 void setup() {
   size(800, 600);
   
+  
+  
 } // end setup
 
 
@@ -20,23 +22,23 @@ void draw() {
   fill(#006bbb);
   rect(0, 500, 800, 100);
   
-  //waves
-  stroke(#ebb2c3);
-  fill(#ebb2c3);
-  ellipse(150, 500, 100, 50);
-  ellipse(350, 500, 100, 50);
-  ellipse(550, 500, 100, 50);
-  ellipse(750, 500, 100, 50);
-
+  //waves part 1
+  stroke(#c8d8e8);
+  fill(#c8d8e8);
+  ellipse(150, 500, 100, 40);
+  ellipse(350, 500, 100, 40);
+  ellipse(550, 500, 100, 40);
+  ellipse(750, 500, 100, 40);
+  
   
   //background
   stroke(#1e0f75);
   fill(#1e0f75);
-  rect(0, 0, 800, 100);
+  rect(0, 0, 800, 80);
  
   stroke(#1c1dab);
   fill(#1c1dab);
-  rect(0, 100, 800, 75);
+  rect(0, 80, 800, 75);
   
   stroke(#3785d8);
   fill(#3785d8);
@@ -44,7 +46,7 @@ void draw() {
   
   stroke(#adc6e5);
   fill(#adc6e5);
-  rect(0, 200, 800, 75);
+  rect(0, 205, 800, 75);
   
   stroke(#bf8ce1);
   fill(#bf8ce1);
@@ -52,17 +54,27 @@ void draw() {
   
   stroke(#e893c5);
   fill(#e893c5);
-  rect(0, 300, 800, 50);
+  rect(0, 310, 800, 75);
   
   stroke(#ebb2c3);
   fill(#ebb2c3);
-  rect(0, 350, 800, 50);
+  rect(0, 360, 800, 75);
   
   stroke(#c8d8e8);
   fill(#c8d8e8);
-  rect(0, 400, 800, 100);
+  rect(0, 420, 800, 80);
   
-  filter(BLUR, 20);
+  //filter(BLUR, 20);
+
+
+  //wave part 2
+  stroke(#006bbb);
+  fill(#006bbb);
+  ellipse(49, 507, 100, 40);
+  ellipse(250, 509, 100, 40);
+  ellipse(450, 509, 100, 40);
+  ellipse(650, 509, 100, 40);
+  ellipse(850, 509, 100, 40);
 
   
   //stars
