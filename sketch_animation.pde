@@ -3,32 +3,28 @@
 //february 12, 2025
 
 // variables
+int wavesX;
 
 
 
-
-void setup() {
+void setup() { //=======================================
   size(800, 600);
   
+  wavesX = 0;
   
   
-} // end setup
+} // end setup =========================================
 
 
-void draw() {
+
+void draw() { //========================================
 
   //water base
   stroke(#006bbb);
   fill(#006bbb);
   rect(0, 500, 800, 100);
   
-  //waves part 1
-  stroke(#c8d8e8);
-  fill(#c8d8e8);
-  ellipse(150, 500, 100, 40);
-  ellipse(350, 500, 100, 40);
-  ellipse(550, 500, 100, 40);
-  ellipse(750, 500, 100, 40);
+ 
   
   
   //background
@@ -67,16 +63,7 @@ void draw() {
   //filter(BLUR, 20);
 
 
-  //wave part 2
-  stroke(#006bbb);
-  fill(#006bbb);
-  ellipse(49, 507, 100, 40);
-  ellipse(250, 509, 100, 40);
-  ellipse(450, 509, 100, 40);
-  ellipse(650, 509, 100, 40);
-  ellipse(850, 509, 100, 40);
 
-  
   //stars
   stroke(255);
   strokeWeight(1);
@@ -114,6 +101,56 @@ void draw() {
   point(513, 326);
   point(535, 95);
   point(175, 335);
+  
+  
+  //moving waves
+  waves(wavesX, 0);
+  wavesX = wavesX + 1;
+  if (wavesX > 800) {
+   wavesX = -800 ;
+    
+  }
 
   
-} // end draw
+} // end draw ======================================
+
+
+void waves(int x, int y) { //=======================
+  pushMatrix();
+  
+  translate(x, y);
+  
+   //waves part 1
+  stroke(#c8d8e8);
+  fill(#c8d8e8);
+  ellipse(150, 500, 100, 40);
+  ellipse(350, 500, 100, 40);
+  ellipse(550, 500, 100, 40);
+  ellipse(750, 500, 100, 40);
+  //wave part 2
+  stroke(#006bbb);
+  fill(#006bbb);
+  ellipse(49, 507, 100, 40);
+  ellipse(250, 509, 100, 40);
+  ellipse(450, 509, 100, 40);
+  ellipse(650, 509, 100, 40);
+  ellipse(850, 509, 100, 40);
+
+   //waves part 1.1
+  stroke(#c8d8e8);
+  fill(#c8d8e8);
+  ellipse(-750, 500, 100, 40);
+  ellipse(-550, 500, 100, 40);
+  ellipse(-350, 500, 100, 40);
+  ellipse(-150, 500, 100, 40);
+  //wave part 2.1
+  stroke(#006bbb);
+  fill(#006bbb);
+  ellipse(-850, 507, 100, 40);
+  ellipse(-650, 509, 100, 40);
+  ellipse(-450, 509, 100, 40);
+  ellipse(-250, 509, 100, 40);
+  ellipse(-49, 509, 100, 40);
+
+  popMatrix();
+} //end void waves ===============================
