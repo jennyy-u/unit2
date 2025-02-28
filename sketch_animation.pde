@@ -8,6 +8,8 @@ int wavesY;
 int counter;
 int starsX;
 int starsY;
+int stars2X;
+int stars2Y;
 
 
 
@@ -82,19 +84,30 @@ void draw() { //========================================
   line(360, 370, 380, 370);
 
   //shooting stars------------------------------------------------------------------
-  shootingstars(500, 0);
-  
+  //shootingstars(500, 0);
+
   shootingstars(starsX, starsY);
-    starsX = starsX - 1;
-    starsY = starsY + 1;
-    if (starsX < 0) {
+  starsX = starsX - 1;
+  starsY = starsY + 1;
+  if (starsX < 0) {
     starsX = 500 ;
   }
-    if (starsY > 500) {
-    starsY = 0 ;
+  if (starsY > 150) {
+    starsY = -300 ;
   }
 
-  line(140, 380, 170, 340);
+
+  //shootingstars2(100, 300);
+
+  shootingstars2(starsX, starsY);
+  stars2X = stars2X - 1;
+  stars2Y = stars2Y + 1;
+  if (stars2X < 0) {
+    stars2X = 200 ;
+  }
+  if (stars2Y > 200) {
+    stars2Y = -100 ;
+  }
 
   //points stars--------------------------------------------------------------------
   strokeWeight(3);
@@ -233,8 +246,10 @@ void draw() { //========================================
 
 void shootingstars(int x, int y) { //========================
   pushMatrix();
-  
+
   translate(x, y);
+  //fill(0);
+  //circle(0, 0, 10);
   line(500, 130, 530, 100);
   line(490, 135, 490, 145);
   line(485, 140, 495, 140);
@@ -242,6 +257,14 @@ void shootingstars(int x, int y) { //========================
   popMatrix();
 } //end void shootingstars ==========================================
 
+void shootingstars2(int x, int y) { //========================
+  pushMatrix();
+
+  translate(x, y);
+  line(140, 380, 170, 340);
+
+  popMatrix();
+} //end void shootingstars ==========================================
 
 void waves(int x, int y) { //=======================
   pushMatrix();
